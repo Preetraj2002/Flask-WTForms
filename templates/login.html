@@ -29,6 +29,8 @@
 <!--				{{ form.submit() }}-->
 
 <!--			</form>-->
+			{{ form.hidden_tag() }}
+  			{{ wtf.form_errors(form, hiddens="only") }}
 			{{ wtf.quick_form(form,novalidate=True) }}
 
         </div>

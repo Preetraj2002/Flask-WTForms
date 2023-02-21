@@ -5,9 +5,8 @@ from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired,Email,Length
 
 app = Flask(__name__)
-Bootstrap(app)
-
 app.secret_key = "some secret string"
+Bootstrap(app)
 
 class Myform(FlaskForm):
     email = StringField(label="Email: ", validators=[DataRequired(),Email()])
